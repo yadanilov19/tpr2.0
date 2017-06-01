@@ -125,9 +125,9 @@
                 var data = $scope.data;
 
                 $scope.label = data.label;
-                $scope.var = Number(data.title.split(":")[1] ? data.title.split(":")[1] : 0);
+                $scope.var = data.dataNode.cost;
                 //$scope.callBack
-                $scope.typeShape = data.class;
+                $scope.typeShape = data.dataNode.class;
 
                 su.rerender();
             };
@@ -187,7 +187,7 @@
                         sum += getVAl(toNode, Number(item.label), nodes, edges);
                     });
                     nodes._data[mainNode.id].label = 'M\n' + sum;
-                    return sum;
+                    return sum * edgeVer;
 
                 } else if (mainNode.dataNode.class === 'StartState') {
                     var edgesFromMain = edges.get({ filter: function(item) { return item.from === mainNode.id } });
