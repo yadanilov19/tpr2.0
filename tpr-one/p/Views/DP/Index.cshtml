@@ -11,7 +11,7 @@
     <button style="float:right; padding:20px;" class="btn btn-default meenuItem animate menuItem" ng-click="example()">Пример</button>
 }
 
-<body ng-app="app" ng-controller="LVM">
+<body ng-app="app" ng-controller="DPcontroller">
     <div id="content">
         <div id="vis" style="width: 100%"></div>
     </div>
@@ -27,16 +27,16 @@
                         <div class="col-md-5">
                             <div class="funkyradio">
                                 <div class="funkyradio-default">
-                                    <input type="radio" name="radio" id="radio1" ng-model="typeShape" value="and" />
-                                    <label for="radio1">Вершина И</label>
+                                    <input type="radio" name="radio" id="radio1" ng-model="typeShape" value="BetweenState" />
+                                    <label for="radio1">Промежуточная вершина</label>
                                 </div>
                                 <div class="funkyradio-primary">
-                                    <input type="radio" name="radio" id="radio2" ng-model="typeShape" value="or" />
-                                    <label for="radio2">Вершина ИЛИ</label>
+                                    <input type="radio" name="radio" id="radio2" ng-model="typeShape" value="StartState" />
+                                    <label for="radio2">Корневая вершина</label>
                                 </div>
                                 <div class="funkyradio-success">
-                                    <input type="radio" name="radio" id="radio3" ng-model="typeShape" value="state" />
-                                    <label for="radio3">Вершина события</label>
+                                    <input type="radio" name="radio" id="radio3" ng-model="typeShape" value="CompleteState" />
+                                    <label for="radio3">Конечная вершина</label>
                                 </div>
                             </div>
                         </div>
@@ -45,14 +45,14 @@
                                 <span class="input-group-addon">
                                     Название вершины
                                 </span>
-                                <input type="text" class="form-control" ng-model="label" ng-disabled="typeShape !== 'state'" />
+                                <input type="text" class="form-control" ng-model="label" ng-disabled="typeShape !== 'CompleteState'" />
                             </div>
                             <hr />
                             <div class="input-group">
                                 <span class="input-group-addon">
-                                    Вероятность возникновения
+                                    Цена
                                 </span>
-                                <input type="number" class="form-control" ng-model="var" ng-disabled="typeShape !== 'state'" />
+                                <input type="number" class="form-control" ng-model="var" ng-disabled="typeShape !== 'CompleteState'" />
                             </div>
                         </div>
                     </div>
