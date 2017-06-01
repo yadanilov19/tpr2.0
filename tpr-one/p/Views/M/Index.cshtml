@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Марковские процессы";
+    ViewBag.Link = 0;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/app/angular/controllers.js"></script>
+}
+@section Menu{
+    <div class="meenuItem">
+        <p>Число состояний</p>
+        <input class="form-control" ng-model="countStates">
+    </div>
+    <div class="meenuItem">
+        <p>Kоличество стратегий</p>
+        <input class="form-control" ng-model="countStrategis">
+    </div>
+    <div class="meenuItem">
+        <p>Kоличество шагов моделирования</p>
+        <input class="form-control" ng-model="countModeling">
+    </div>
+    <button style="float:right; padding:20px;" class="btn btn-info animate" ng-if="buttonStartHidden" ng-click="startEvaluate()">Начать</button>
+    <button style="float:right; padding:20px;" class="btn btn-danger meenuItem animate" ng-click="generateTablesForInput()">Зафиксировать</button>
+    @*<button style="float:right; padding:20px;" class="btn btn-default meenuItem animate" ng-click="example()">Пример</button>*@
+}
+
+<body ng-app="app" ng-controller="main">
+<div id="content">
+    <div class="panel panel-info" ng-repeat="row in inputMatrix" style="margin: 5px; display: inline-block">
+        <div class="panel-heading">
+            <h5>Стратегия №{{$index+1}}</h5>
+        </div>
+        <table class="panel-body">
+            <tr class="row">
+                <td style="padding: 5px" />
+                <td style="padding: 5px" ng-repeat="nameState in namesStates">
+                    <input class="form-control" ng-model="nameState.name" />
+                </td>
+            </tr>
+            <tr class="row" ng-repeat="cells in row">
+                <td style="padding: 5px">
+                    <input class="form-control" ng-model="namesStates[$index].name">
+                </td>
+                <td style="padding: 5px" ng-repeat="cell in cells">
+                    <input type="number" class="form-control" ng-model="cell.value"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="panel panel-danger" ng-repeat="row in inputMatrixD" style="margin: 5px; display: inline-block">
+        <div class="panel-heading">
+            <h5>Доходность №{{$index+1}}</h5>
+        </div>
+        <table class="panel-body">
+            <tr class="row">
+                <td style="padding: 5px" />
+                <td style="padding: 5px" ng-repeat="nameState in namesStates">
+                    <b>{{nameState.name}}</b>
+                </td>
+            </tr>
+            <tr class="row" ng-repeat="cells in row">
+                <td style="padding: 5px">
+                    <b>{{namesStates[$index].name}}</b>
+                </td>
+                <td style="padding: 5px" ng-repeat="cell in cells">
+                    <input type="number" class="form-control" ng-model="cell.value"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <hr />
+    <div id="gagagagagaga"></div>
+    <hr />
+    <div id="table" class="panel contentElement" ng-if="evaluateComplete">
+        <table class="table table-responsive table-bordered">
+            <thead class="thead-inverse">
+                <tr>
+                    <th rowspan="2">состояния</th>
+                    <th rowspan="2">стратегии</th>
+                    <th colspan="{{countStates}}">переходные вер-ти</th>
+                    <th colspan="{{countStates}}">доходности</th>
+                    <th rowspan="2">ожимаемые доходности</th>
+                </tr>
+                <tr>
+                    <th ng-repeat="var in namesStates">
+                        {{var.name}}
+                    </th>
+                    <th ng-repeat="value in namesCapital">
+                        {{value}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in outputMatrix">
+                    <td ng-if="row.isState" rowspan="{{countStrategis}}">
+                        {{namesStates[row.state].name}}
+                    </td>
+                    <td>
+                        {{row.strategy + 1}}
+                    </td>
+                    <td ng-repeat="variant in row.variants">
+                        {{variant.value}}
+                    </td>
+                    <td ng-repeat="deposit in row.deposit">
+                        {{deposit.value}}
+                    </td>
+                    <td>{{row.sum}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{8F9EBD48-FF9A-4E16-A64B-7E05ED6AC072}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\angular\controllers.js" />
+    <Content Include="app\angular\directives.js" />
+    <Content Include="app\content\app.css" />
+    <Content Include="app\content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="app\content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="app\content\bootstrap\css\bootstrap.css" />
+    <Content Include="app\content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="app\content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\content\bootstrap\js\bootstrap.js" />
+    <Content Include="app\content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="app\content\bootstrap\js\npm.js" />
+    <Content Include="app\lib\angular.min.js" />
+    <Content Include="app\lib\cytoscape.js" />
+    <Content Include="app\lib\jquery-3.1.1.js" />
+    <Content Include="app\lib\lib\DataSet.js" />
+    <Content Include="app\lib\lib\DataView.js" />
+    <Content Include="app\lib\lib\DOMutil.js" />
+    <Content Include="app\lib\lib\graph3d\Camera.js" />
+    <Content Include="app\lib\lib\graph3d\Filter.js" />
+    <Content Include="app\lib\lib\graph3d\Graph3d.js" />
+    <Content Include="app\lib\lib\graph3d\Point2d.js" />
+    <Content Include="app\lib\lib\graph3d\Point3d.js" />
+    <Content Include="app\lib\lib\graph3d\Range.js" />
+    <Content Include="app\lib\lib\graph3d\Settings.js" />
+    <Content Include="app\lib\lib\graph3d\Slider.js" />
+    <Content Include="app\lib\lib\graph3d\StepNumber.js" />
+    <Content Include="app\lib\lib\hammerUtil.js" />
+    <Content Include="app\lib\lib\header.js" />
+    <Content Include="app\lib\lib\module\hammer.js" />
+    <Content Include="app\lib\lib\module\moment.js" />
+    <Content Include="app\lib\lib\module\uuid.js" />
+    <Content Include="app\lib\lib\network\css\network-colorpicker.css" />
+    <Content Include="app\lib\lib\network\css\network-manipulation.css" />
+    <Content Include="app\lib\lib\network\css\network-navigation.css" />
+    <Content Include="app\lib\lib\network\dotparser.js" />
+    <Content Include="app\lib\lib\network\gephiParser.js" />
+    <Content Include="app\lib\lib\network\Images.js" />
+    <Content Include="app\lib\lib\network\img\acceptDeleteIcon.png" />
+    <Content Include="app\lib\lib\network\img\addNodeIcon.png" />
+    <Content Include="app\lib\lib\network\img\backIcon.png" />
+    <Content Include="app\lib\lib\network\img\connectIcon.png" />
+    <Content Include="app\lib\lib\network\img\cross.png" />
+    <Content Include="app\lib\lib\network\img\cross2.png" />
+    <Content Include="app\lib\lib\network\img\deleteIcon.png" />
+    <Content Include="app\lib\lib\network\img\downArrow.png" />
+    <Content Include="app\lib\lib\network\img\editIcon.png" />
+    <Content Include="app\lib\lib\network\img\leftArrow.png" />
+    <Content Include="app\lib\lib\network\img\minus.png" />
+    <Content Include="app\lib\lib\network\img\plus.png" />
+    <Content Include="app\lib\lib\network\img\rightArrow.png" />
+    <Content Include="app\lib\lib\network\img\upArrow.png" />
+    <Content Include="app\lib\lib\network\img\zoomExtends.png" />
+    <Content Include="app\lib\lib\network\locales.js" />
+    <Content Include="app\lib\lib\network\modules\Canvas.js" />
+    <Content Include="app\lib\lib\network\modules\CanvasRenderer.js" />
+    <Content Include="app\lib\lib\network\modules\Clustering.js" />
+    <Content Include="app\lib\lib\network\modules\components\algorithms\FloydWarshall.js" />
+    <Content Include="app\lib\lib\network\modules\components\Edge.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\BezierEdgeDynamic.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\BezierEdgeStatic.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\CubicBezierEdge.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\StraightEdge.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\util\BezierEdgeBase.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\util\CubicBezierEdgeBase.js" />
+    <Content Include="app\lib\lib\network\modules\components\edges\util\EdgeBase.js" />
+    <Content Include="app\lib\lib\network\modules\components\NavigationHandler.js" />
+    <Content Include="app\lib\lib\network\modules\components\Node.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\Cluster.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Box.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Circle.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\CircularImage.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Database.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Diamond.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Dot.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Ellipse.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Icon.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Image.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Square.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Star.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Text.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\Triangle.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\shapes\TriangleDown.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\util\CircleImageBase.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\util\NodeBase.js" />
+    <Content Include="app\lib\lib\network\modules\components\nodes\util\ShapeBase.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\BarnesHutSolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\CentralGravitySolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\FA2BasedCentralGravitySolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\FA2BasedRepulsionSolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\HierarchicalRepulsionSolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\HierarchicalSpringSolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\RepulsionSolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\physics\SpringSolver.js" />
+    <Content Include="app\lib\lib\network\modules\components\shared\Label.js" />
+    <Content Include="app\lib\lib\network\modules\EdgesHandler.js" />
+    <Content Include="app\lib\lib\network\modules\Groups.js" />
+    <Content Include="app\lib\lib\network\modules\InteractionHandler.js" />
+    <Content Include="app\lib\lib\network\modules\KamadaKawai.js" />
+    <Content Include="app\lib\lib\network\modules\LayoutEngine.js" />
+    <Content Include="app\lib\lib\network\modules\ManipulationSystem.js" />
+    <Content Include="app\lib\lib\network\modules\NodesHandler.js" />
+    <Content Include="app\lib\lib\network\modules\PhysicsEngine.js" />
+    <Content Include="app\lib\lib\network\modules\SelectionHandler.js" />
+    <Content Include="app\lib\lib\network\modules\View.js" />
+    <Content Include="app\lib\lib\network\Network.js" />
+    <Content Include="app\lib\lib\network\NetworkUtil.js" />
+    <Content Include="app\lib\lib\network\options.js" />
+    <Content Include="app\lib\lib\network\shapes.js" />
+    <Content Include="app\lib\lib\Queue.js" />
+    <Content Include="app\lib\lib\shared\activator.css" />
+    <Content Include="app\lib\lib\shared\Activator.js" />
+    <Content Include="app\lib\lib\shared\bootstrap.css" />
+    <Content Include="app\lib\lib\shared\ColorPicker.js" />
+    <Content Include="app\lib\lib\shared\configuration.css" />
+    <Content Include="app\lib\lib\shared\Configurator.js" />
+    <Content Include="app\lib\lib\shared\Popup.js" />
+    <Content Include="app\lib\lib\shared\tooltip.css" />
+    <Content Include="app\lib\lib\shared\Validator.js" />
+    <Content Include="app\lib\lib\timeline\component\BackgroundGroup.js" />
+    <Content Include="app\lib\lib\timeline\component\Component.js" />
+    <Content Include="app\lib\lib\timeline\component\css\animation.css" />
+    <Content Include="app\lib\lib\timeline\component\css\currenttime.css" />
+    <Content Include="app\lib\lib\timeline\component\css\customtime.css" />
+    <Content Include="app\lib\lib\timeline\component\css\dataaxis.css" />
+    <Content Include="app\lib\lib\timeline\component\css\item.css" />
+    <Content Include="app\lib\lib\timeline\component\css\itemset.css" />
+    <Content Include="app\lib\lib\timeline\component\css\labelset.css" />
+    <Content Include="app\lib\lib\timeline\component\css\panel.css" />
+    <Content Include="app\lib\lib\timeline\component\css\pathStyles.css" />
+    <Content Include="app\lib\lib\timeline\component\css\timeaxis.css" />
+    <Content Include="app\lib\lib\timeline\component\css\timeline.css" />
+    <Content Include="app\lib\lib\timeline\component\CurrentTime.js" />
+    <Content Include="app\lib\lib\timeline\component\CustomTime.js" />
+    <Content Include="app\lib\lib\timeline\component\DataAxis.js" />
+    <Content Include="app\lib\lib\timeline\component\DataScale.js" />
+    <Content Include="app\lib\lib\timeline\component\graph2d_types\bar.js" />
+    <Content Include="app\lib\lib\timeline\component\graph2d_types\line.js" />
+    <Content Include="app\lib\lib\timeline\component\graph2d_types\points.js" />
+    <Content Include="app\lib\lib\timeline\component\GraphGroup.js" />
+    <Content Include="app\lib\lib\timeline\component\Group.js" />
+    <Content Include="app\lib\lib\timeline\component\ItemSet.js" />
+    <Content Include="app\lib\lib\timeline\component\item\BackgroundItem.js" />
+    <Content Include="app\lib\lib\timeline\component\item\BoxItem.js" />
+    <Content Include="app\lib\lib\timeline\component\item\Item.js" />
+    <Content Include="app\lib\lib\timeline\component\item\PointItem.js" />
+    <Content Include="app\lib\lib\timeline\component\item\RangeItem.js" />
+    <Content Include="app\lib\lib\timeline\component\Legend.js" />
+    <Content Include="app\lib\lib\timeline\component\LineGraph.js" />
+    <Content Include="app\lib\lib\timeline\component\TimeAxis.js" />
+    <Content Include="app\lib\lib\timeline\Core.js" />
+    <Content Include="app\lib\lib\timeline\DateUtil.js" />
+    <Content Include="app\lib\lib\timeline\Graph2d.js" />
+    <Content Include="app\lib\lib\timeline\locales.js" />
+    <Content Include="app\lib\lib\timeline\optionsGraph2d.js" />
+    <Content Include="app\lib\lib\timeline\optionsTimeline.js" />
+    <Content Include="app\lib\lib\timeline\Range.js" />
+    <Content Include="app\lib\lib\timeline\Stack.js" />
+    <Content Include="app\lib\lib\timeline\Timeline.js" />
+    <Content Include="app\lib\lib\timeline\TimeStep.js" />
+    <Content Include="app\lib\lib\util.js" />
+    <Content Include="app\lib\vis-graph3d.min.js" />
+    <Content Include="app\lib\vis-network.min.css" />
+    <Content Include="app\lib\vis-network.min.js" />
+    <Content Include="app\lib\vis-timeline-graph2d.min.css" />
+    <Content Include="app\lib\vis-timeline-graph2d.min.js" />
+    <Content Include="app\lib\vis.min.css" />
+    <Content Include="app\lib\vis.min.js" />
+    <Content Include="index.html" />
+    <Content Include="LVM.html" />
+    <Content Include="MProcess.html" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app\classes\markovski.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\content\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="app\content\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="app\content\bootstrap\css\bootstrap.css.map" />
+    <Content Include="app\content\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="app\content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49711</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49711/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
